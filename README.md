@@ -54,84 +54,137 @@ O projeto segue os princípios de **Clean Architecture**, garantindo separação
 
 ---
 
-## 🟢 Sprint 1 — MVP (Fundação)
+## 🟢 Sprint 1 — MVP: Fundação do Sistema
 
-### 🎯 Objetivo
+🎯 Objetivo
+Construir a base funcional do SmartPanel, permitindo que usuários criem projetos, montem formulários dinâmicos e coletem respostas pelo aplicativo mobile.
 
-Construir a base funcional do sistema, permitindo criação e resposta de formulários.
+# ✅ Funcionalidades Entregues
+Cadastro e autenticação de usuários
 
-### ✅ Funcionalidades
+Login com e-mail e senha
 
-* Cadastro e autenticação de usuários
-* Criação de projetos
-* Criação de formulários dinâmicos
-* Renderização de formulários no mobile
-* Envio de respostas
-* Validação de campos obrigatórios
+Criação e organização de projetos
 
-### Tecnologias aplicadas
+Criação de formulários dinâmicos
 
-* JWT para autenticação
-* Estrutura dinâmica de formulários (JSON)
-* Renderização condicional no mobile
+Campos configuráveis por tipo
 
-###  Resultado
+Renderização dos formulários no mobile
 
-Sistema funcional similar a um **Google Forms básico**, permitindo criação e coleta de dados.
+Envio de respostas
 
----
+Validação de campos obrigatórios
 
-## 🟡 Sprint 2 — Expansão
+Armazenamento das respostas no backend
 
-### 🎯 Objetivo
+🛠️ Tecnologias Aplicadas
 
-Adicionar controle de acesso e ferramentas de análise.
+Autenticação com JWT
 
-### ✅ Funcionalidades
+Estrutura de formulários baseada em JSON
 
-* Formulários públicos e privados
-* Cadastro de respondentes
-* Dashboard de respostas
-* Exportação de dados (CSV)
-* Filtros de respostas
-* Exclusão lógica (lixeira)
-* Compartilhamento por link
+API REST
 
-### Tecnologias aplicadas
+React Native com Expo
 
-* Controle de permissões por usuário
-* Soft delete (arquivamento)
-* Processamento de dados para exportação
+Renderização dinâmica de campos
 
-###  Resultado
+Banco de dados relacional no backend
 
-Sistema evolui para um produto utilizável em cenários reais.
+## 🟡 Sprint 2 — Expansão: Controle e Gestão
 
----
+ 🎯 Objetivo
 
-## 🔴 Sprint 3 — Avançado
+Evoluir o MVP para um sistema mais utilizável em cenários reais, adicionando controle de acesso, organização dos dados e recursos administrativos.
 
-### 🎯 Objetivo
+#✅ Funcionalidades Entregues
 
-Escalar o sistema com funcionalidades avançadas e melhor experiência do usuário.
+Formulários públicos e privados
 
-### ✅ Funcionalidades
+Compartilhamento de formulários por link
 
-* Upload de imagens nas respostas
-* Visualização gráfica (dashboard)
-* Edição de formulários
-* Notificações (email/push)
-* Limite de respostas por usuário
-* Respostas offline (sync posterior)
-* QR Code para acesso
-* Personalização visual
-* Busca em respostas
-* Drag and drop de campos
-* Relatórios automáticos (PDF)
-* Versionamento de formulários
-* Comentários em respostas
-* Sistema de times
-* Webhooks
+Controle de acesso por usuário
+
+Listagem de respostas recebidas
+
+Visualização detalhada das respostas
+
+Exportação de dados em CSV
+
+Arquivamento de projetos e formulários
+
+Lixeira com possibilidade de restauração
+
+Separação entre dono do projeto e respondentes
+
+Cache local de projetos e formulários
+
+🛠️ Tecnologias Aplicadas
+
+Controle de permissões no backend
+
+Soft delete para arquivamento
+
+Exportação de dados
+
+Cache local no aplicativo
+
+Integração entre frontend mobile e API
+
+
+## 🔴 Sprint 3 — Final: Experiência Profissional e Uso Offline
+ 🎯 Objetivo
+Finalizar o sistema com recursos avançados, melhor experiência para o usuário e preparação para uso real em campo, inclusive em cenários com internet instável.
+
+# ✅ Funcionalidades Entregues
+Dashboard analítico de respostas
+
+Gráficos de barra, linha e pizza
+
+Exportação de relatório em PDF
+
+Upload de imagens nas respostas
+
+Edição de formulários
+
+Personalização visual dos projetos
+
+Drag and drop para reorganização de campos
+
+Sincronização offline com SQLite
+
+Fila local de ações pendentes
+
+Sincronização automática ao voltar a conexão
+
+Cache local de projetos e formulários
+
+Suporte a notificações push
+
+Preparação para login social com Google
+
+Preparação para build Android/APK
+
+🛠️ Tecnologias Aplicadas
+
+SQLite local com expo-sqlite
+
+Fila de sincronização offline
+
+SecureStore para sessão local
+
+NetInfo para detecção de conexão
+
+Geração de PDF no mobile
+
+Gráficos com SVG
+
+Upload de arquivos/imagens
+
+Push notifications com Expo
+
+Configuração Android com Expo
 
 ###  Tecnologias aplicadas
 
@@ -140,22 +193,41 @@ Escalar o sistema com funcionalidades avançadas e melhor experiência do usuár
 * Geração de relatórios
 * Integrações externas
 
-### Resultado
 
-Sistema completo com características de um **SaaS profissional de formulários**.
 
 ---
 
-## 📊 Funcionalidades Principais
+## 📊 Funcionalidades Principais do SmartPanel
+📁 Projetos organizados por usuário
 
-* 📁 Projetos organizados por usuário
-* 🧩 Formulários dinâmicos
-* 🧑‍🤝‍🧑 Controle de acesso (público/privado)
-* 📸 Upload de imagens
-* 📊 Dashboard analítico
-* 📤 Exportação de dados
-* 🔄 Sincronização offline
-* 🔐 Segurança com JWT
+🧩 Formulários dinâmicos
+
+🔐 Autenticação com JWT
+
+🧑‍🤝‍🧑 Controle de acesso público e privado
+
+📱 Aplicativo mobile com Expo
+
+📸 Upload de imagens nas respostas
+
+📊 Dashboard analítico
+
+📄 Relatórios em PDF
+
+📤 Exportação em CSV
+
+🗑️ Arquivamento e lixeira
+
+🔄 Sincronização offline
+
+💾 Cache local com SQLite
+
+🔔 Suporte a notificações push
+
+🎨 Personalização visual
+
+🧱 Drag and drop de campos
+
 
 ---
 
